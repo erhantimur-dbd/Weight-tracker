@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #C9A84C;
+  --color-gold-light: #D4B962;
+  --color-gold-dark: #A88A3D;
+  --color-dark: #0A0A0A;
+  --color-dark-card: #141414;
+  --color-dark-border: #2A2A2A;
+  --color-dark-surface: #1A1A1A;
+  --color-dark-text: #E5E5E5;
+  --color-dark-muted: #888888;
+  --color-red-500: #ef4444;
+  --color-green-500: #22c55e;
+  --color-green-400: #4ade80;
+  --color-blue-500: #3b82f6;
+  --color-emerald-500: #10b981;
+  --color-amber-500: #f59e0b;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #E5E5E5;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #C9A84C, #A88A3D);
+  color: #0A0A0A;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #D4B962, #C9A84C);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+}
+
+.btn-gold:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.card {
+  background-color: #141414;
+  border: 1px solid #2A2A2A;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.input-dark {
+  background-color: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  color: #E5E5E5;
+  width: 100%;
+  transition: border-color 0.2s;
+  font-size: 0.875rem;
+}
+
+.input-dark:focus {
+  outline: none;
+  border-color: #C9A84C;
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.15);
+}
+
+.input-dark::placeholder {
+  color: #888888;
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.1);
+}
+
+select.input-dark {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
